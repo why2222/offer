@@ -5,6 +5,7 @@ package src;
  * @date 2019-11-18 - 16:35
  */
 public class SolutionFour {
+    // 暴力解法
     public static boolean Find(int target,int [][] array){
         if (array.length == 1)
             return false;
@@ -18,5 +19,26 @@ public class SolutionFour {
             }
         }
         return false;
+    }
+    // 比较法
+    public static boolean Find2(int target,int [][] array){
+        boolean found = false;
+        int rows,columns;
+        rows = columns = array.length;
+        if (array.length != 1){
+            int row = 0;
+            int column = columns - 1;
+            while(row < array.length && column >= 0){
+                if (array[row][column] == target){
+                    found = true;
+                    break;
+                }else if (array[row][column] > target){
+                    column -= 1;
+                }else {
+                    row += 1;
+                }
+            }
+        }
+        return found;
     }
 }
