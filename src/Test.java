@@ -10,6 +10,6 @@ public class Test {
         int numbers[] = {2,1,3,0,4};
         int length = 5;
         int [] duplication = {};
-        SolutionThree.duplicate2(numbers,length,duplication);
+        Solution3.duplicate2(numbers,length,duplication);
     }
 }

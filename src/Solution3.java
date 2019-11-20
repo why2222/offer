@@ -1,6 +1,6 @@
 package src;
 
-public class SolutionThree {
+public class Solution3 {
     public static boolean duplicate(int numbers[],int length,int [] duplication){
         for (int i = 0;i < length;i++){
             for (int j = i+1;j < length;j++){

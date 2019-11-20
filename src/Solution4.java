@@ -4,7 +4,7 @@ package src;
  * @auther why
  * @date 2019-11-18 - 16:35
  */
-public class SolutionFour {
+public class Solution4 {
     // 暴力解法
     public static boolean Find(int target,int [][] array){
         if (array.length == 1)
