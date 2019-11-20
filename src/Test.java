@@ -7,9 +7,9 @@ package src;
 public class Test {
     public static void main(String[] args) {
         boolean res;
-        int target = 1;
-        int [][] array = {{1},{1}};
-        res = SolutionFour.Find(target,array);
-        System.out.println(res);
+        int numbers[] = {2,1,3,0,4};
+        int length = 5;
+        int [] duplication = {};
+        SolutionThree.duplicate2(numbers,length,duplication);
     }
 }
