@@ -6,10 +6,7 @@ package src;
  */
 public class Test {
     public static void main(String[] args) {
-        boolean res;
-        int numbers[] = {2,1,3,0,4};
-        int length = 5;
-        int [] duplication = {};
-        Solution3.duplicate2(numbers,length,duplication);
+        StringBuffer str = new StringBuffer("We Are Happy");
+        System.out.println(Solution5.replaceSpace(str));
     }
 }
