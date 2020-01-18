@@ -1,4 +1,4 @@
-package src;
+
 
 public class Solution11 {
     public static int minNumberInRotateArray(int[] array) {

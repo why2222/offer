@@ -1,5 +1,3 @@
-package src;
-
 public class Solution10 {
     // 使用递归，跳进陷阱，复杂度高
     public int Fibonacci(int n) {

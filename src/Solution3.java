@@ -1,4 +1,3 @@
-package src;
 
 public class Solution3 {
     public static boolean duplicate(int numbers[],int length,int [] duplication){

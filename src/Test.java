@@ -1,4 +1,3 @@
-package src;
 
 /**
  * @auther why
@@ -17,6 +16,6 @@ public class Test {
                 5437, 5448, 5668, 5706, 5725,
                 6300, 6335};
         int[] arr2 = {3, 4, 5, 1, 2};
-        Solution11.minNumberInRotateArray2(arr2);
+        System.out.println(Solution11.minNumberInRotateArray2(arr2));
     }
 }
