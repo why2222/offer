@@ -1,4 +1,3 @@
-package src;
 
 public class Solution8 {
     public TreeLinkNode GetNext(TreeLinkNode pNode){

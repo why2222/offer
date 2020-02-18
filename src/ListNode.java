@@ -1,4 +1,3 @@
-package src;
 
 public class ListNode {
     int val;
@@ -6,5 +5,8 @@ public class ListNode {
 
     ListNode(int val){
         this.val = val;
+    }
+
+    ListNode() {
     }
 }
