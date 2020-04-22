@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import com.sun.xml.internal.messaging.saaj.soap.ver1_2.BodyElement1_2Impl;
 
 /**
  * @auther why
@@ -6,12 +6,7 @@ import java.util.ArrayList;
  */
 public class Test {
     public static void main(String[] args) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
-        int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
-        int[][] m2 = {{1,2},{3,4},{5,6},{7,8},{9,10}};
-        result = Solution29.printMatrix(m2);
-        for (int i : result) {
-            System.out.println("ArrayList:" + i);
-        }
+        String str = "-2147483649";
+        System.out.println(Solution67.StrToInt(str));
     }
 }

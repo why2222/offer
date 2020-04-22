@@ -28,4 +28,62 @@ public class Solution10 {
 
         return res;
     }
+
+    // 跳台阶(递归)
+    public int JumpFloor(int target) {
+        // 初始条件
+        if (target <= 2) {
+            return target;
+        }
+
+        return JumpFloor(target - 1) + JumpFloor(target - 2);
+
+    }
+
+    // 跳台阶 (Fibonacci)
+    public int JumpFloor2(int target) {
+        if (target <= 2) {
+            return target;
+        }
+        int one = 1, two = 2;
+        int res = 0;
+        for (int i = 3; i <= target; i++) {
+            res = one + two;
+            one = two;
+            two = res;
+        }
+        return res;
+    }
+
+    // 跳台阶 (变态)
+    public int JumpFloorPro(int target) {
+        if (target <= 2) {
+            return target;
+        }
+        int nums[] = new int[target + 1];
+        nums[0] = 1;
+        nums[1] = 2;
+        int sum = 1;
+        for (int i = 2; i <= target; i++) {
+            nums[i] = sum + 1;
+            sum = sum + nums[i];
+        }
+        return nums[target];
+    }
+
+    // 覆盖矩形
+    public int RectCover(int target) {
+        if (target <= 2) {
+            return target;
+        }
+        int one = 1;
+        int two = 2;
+        int res = 1;
+        for (int i = 3; i <= target; i++) {
+            res = one + two;
+            one = two;
+            two = res;
+        }
+        return res;
+    }
 }
