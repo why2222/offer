@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Solution32 {
     /**
@@ -60,6 +57,35 @@ public class Solution32 {
         }
     }
 
+    /*
+    分行打印--剑指offer
+     */
+    static ArrayList<ArrayList<Integer> > PrintByLayer(TreeNode pRoot) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        if (pRoot == null) {
+            return res;
+        }
+        Queue<TreeNode> treeNodes = new LinkedList<>();
+        treeNodes.add(pRoot);
+        while (!treeNodes.isEmpty()) {
+            int count = treeNodes.size();
+            ArrayList<Integer> temp = new ArrayList<>();
+            while (count > 0) {
+                TreeNode node = treeNodes.poll();
+                temp.add(node.val);
+                if (node.left != null) {
+                    treeNodes.add(node.left);
+                }
+                if (node.right != null) {
+                    treeNodes.add(node.right);
+                }
+                count--;
+            }
+            res.add(temp);
+        }
+        return res;
+    }
+
     public static void PrintByZhi(TreeNode root) {
         if (root == null) {
             return;
@@ -97,5 +123,43 @@ public class Solution32 {
                 next = 1 - next;
             }
         }
+    }
+
+    /**
+     * 之字形打印二叉树--剑指offer
+     * @param pRoot
+     * @return
+     */
+    public static ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        if (pRoot == null) {
+            return res;
+        }
+        Queue<TreeNode> trees = new LinkedList<>();
+        trees.add(pRoot);
+        boolean flag = true;
+        while (!trees.isEmpty()) {
+            ArrayList<Integer> temp = new ArrayList<>();
+            int count = trees.size();
+            while (count > 0) {
+                TreeNode node = trees.poll();
+                temp.add(node.val);
+                if (node.left != null) {
+                    trees.add(node.left);
+                }
+                if (node.right != null) {
+                    trees.add(node.right);
+                }
+                count--;
+            }
+            if (flag) {
+                res.add(temp);
+            } else {
+                Collections.reverse(temp);
+                res.add(temp);
+            }
+            flag = !flag;
+        }
+        return res;
     }
 }

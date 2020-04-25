@@ -4,7 +4,7 @@ public class Solution14 {
      * @param target
      * @return
      */
-    public int cutRope(int target) {
+    public static int cutRope(int target) {
         int[] product = new int[target + 1];    // 构造数组，来存储每一个子集最优解
         product[1] = 1;
         for (int i = 2; i <= target; i++) {

@@ -6,7 +6,6 @@ import com.sun.xml.internal.messaging.saaj.soap.ver1_2.BodyElement1_2Impl;
  */
 public class Test {
     public static void main(String[] args) {
-        String str = "-2147483649";
-        System.out.println(Solution67.StrToInt(str));
+        Solution14.cutRope(5);
     }
 }

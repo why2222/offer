@@ -1,7 +1,13 @@
+import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Solution41 {
+
+    /*
+    数据流中的中位数
+     */
 
     // 用最大堆、最小堆来实现
     Stack<Integer> min = new Stack<>();
@@ -67,5 +73,35 @@ public class Solution41 {
         } else {
             return (double) right.peek();
         }
+    }
+
+    /*
+    ----------------------------------------------------------------------------
+    41.2 字符流中第一个不重复的字符
+     */
+
+    /*
+       使用队列
+     */
+
+    private Queue<Character> res = new LinkedList<>();
+    private int[] buffer = new int[256];
+
+    //Insert one char from stringstream
+    public void Insert(char ch) {
+        buffer[ch]++;
+        res.offer(ch);
+    }
+    //return the first appearence once char in current stringstream
+    public char FirstAppearingOnce()
+    {
+        while (!res.isEmpty()) {
+            if (buffer[res.peek()] == 1) {
+                return res.element();
+            } else {
+                res.poll();
+            }
+        }
+        return '#';
     }
 }
