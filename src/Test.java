@@ -6,6 +6,8 @@ import com.sun.xml.internal.messaging.saaj.soap.ver1_2.BodyElement1_2Impl;
  */
 public class Test {
     public static void main(String[] args) {
-        Solution14.cutRope(5);
+        StringBuffer str = new StringBuffer();
+        str.append("We are Happy.");
+        System.out.println(Solution5.replaceSpace2(str));
     }
 }
