@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class Solution6 {
@@ -33,5 +34,21 @@ public class Solution6 {
         list.add(listNode.val);
 
         return list;
+    }
+
+    public ArrayList<Integer> printListFromTailToHead3(ListNode listNode) {
+        ArrayList<Integer> res = new ArrayList<>();
+        if(listNode == null){
+            return null;
+        }
+        Stack<Integer> temp = new Stack<>();
+        while(listNode != null){
+            temp.push(listNode.val);
+            listNode = listNode.next;
+        }
+        while (!temp.empty()) {
+            res.add(temp.pop());
+        }
+        return res;
     }
 }
